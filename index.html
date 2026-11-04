@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Philistines Relay — an independent comic strip.">
+  <meta property="og:title" content="Philistines Relay">
+  <meta property="og:description" content="An independent comic strip.">
+  <title>Philistines Relay</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="comics.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#latest">Skip to comic strips</a>
+  <header class="site-header" id="top">
+    <h1><a href="#top">PHILISTINES RELAY</a></h1>
+    <nav aria-label="Page navigation">
+      <a href="#latest">LATEST</a>
+      <a href="#archive">ARCHIVE</a>
+      <a href="mailto:philistinesrelay@gmail.com">CONTACT</a>
+      <a href="https://www.instagram.com/philistinesrelay/" target="_blank" rel="noopener noreferrer" aria-label="Instagram @philistinesrelay">INSTAGRAM</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section id="latest" aria-labelledby="latest-title">
+      <div class="section-heading">
+        <h2 id="latest-title">LATEST STRIP</h2>
+        <span id="latest-number" class="muted"></span>
+      </div>
+      <p id="latest-empty" class="empty-text">No strips published yet.</p>
+      <div id="latest-content" hidden>
+        <button class="latest-image-button" id="latest-open" type="button" aria-label="Open latest comic strip">
+          <img id="latest-image" src="" alt="">
+        </button>
+        <div class="strip-caption"><span id="latest-name"></span><time id="latest-date"></time></div>
+      </div>
+    </section>
+
+    <section id="archive" aria-labelledby="archive-title">
+      <div class="section-heading">
+        <h2 id="archive-title">ARCHIVE</h2>
+        <span id="archive-count" class="muted"></span>
+      </div>
+      <p id="archive-empty" class="empty-text">The archive is empty.</p>
+      <div id="archive-grid" class="archive-grid"></div>
+    </section>
+  </main>
+
+  <dialog id="reader" class="reader" aria-labelledby="reader-title">
+    <div class="reader-top">
+      <h2 id="reader-title"></h2>
+      <button type="button" id="reader-close" class="reader-close" aria-label="Close comic strip">×</button>
+    </div>
+    <img id="reader-image" alt="">
+    <div class="reader-navigation">
+      <button type="button" id="reader-older">← OLDER</button>
+      <span id="reader-position"></span>
+      <button type="button" id="reader-newer">NEWER →</button>
+    </div>
+  </dialog>
+</body>
+</html>

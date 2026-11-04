@@ -1,0 +1,47 @@
+PHILISTINES RELAY — PUBLICAR GRATIS Y AGREGAR TIRAS SIN PROGRAMAR
+
+CONFIGURACION INICIAL (UNA SOLA VEZ)
+
+1. Entra a https://github.com y crea una cuenta gratuita.
+2. Ve a https://github.com/new y crea un repositorio (recomendado: "philistines-relay").
+   Elegi "Public" y no marques la opcion de agregar README.
+3. Descomprimi este ZIP en tu computadora. En GitHub, entra al repositorio,
+   elegi "uploading an existing file" o "Add file > Upload files" y
+   ARRASTRA EL CONTENIDO DE LA CARPETA DESCOMPRIMIDA, NO EL ARCHIVO ZIP.
+   Es importante que index.html y build.mjs queden en la raiz del repositorio,
+   y que exista la carpeta "tiras". Hace clic en "Commit changes".
+4. Entra a https://dash.cloudflare.com/ y crea una cuenta gratuita.
+5. Abri Workers & Pages > Create application > Pages > Connect to Git.
+   Si la interfaz cambia, busca Pages y la opcion de conectar GitHub.
+6. Autoriza a Cloudflare a conectar GitHub, elegi tu repositorio
+   "philistines-relay" y la rama "main".
+7. En configuracion de compilacion elegi:
+     Framework preset: None (sin framework)
+     Build command: node build.mjs
+     Build output directory: dist
+   No cambies el directorio raiz del repositorio.
+8. Selecciona Save and Deploy. Cloudflare te dara una direccion "*.pages.dev".
+
+PARA PUBLICAR UNA NUEVA TIRA
+
+1. Renombra el JPG original como 001.jpg (primera tira), 002.jpg (segunda),
+   003.jpg (tercera), etc. Tambien podes usar PNG, WEBP o AVIF.
+2. En GitHub, abri tu repositorio y entra a la carpeta "tiras".
+3. Hace clic en "Add file > Upload files".
+4. Arrastra el nuevo archivo JPG y confirma en "Commit changes".
+5. ¡Listo! Cloudflare vuelve a construir la web automaticamente.
+   La tira de numero mas alto se muestra en LATEST y las demas en ARCHIVE.
+
+IMPORTANTE
+
+- No edites comics.js ni app.js.
+- Si publicas una tira nueva, NO borres las anteriores de la carpeta "tiras".
+- La primera version sin imagenes mostrara 'No strips published yet'.
+- No hay panel de administracion en la web publica.
+- Todo es una web estatica, sin servidores propios ni suscripciones obligatorias.
+- GitHub/Cloudflare tienen limites de uso del plan gratuito.
+- Esta forma requiere crear un proyecto Cloudflare con INTEGRACION GITHUB.
+  Si creaste antes un proyecto por carga directa de ZIP, no se puede
+  convertir ese proyecto a integracion Git: tenes que crear otro proyecto.
+
+Si tenes dudas, podes mandarme capturas y te indico donde hacer clic.
