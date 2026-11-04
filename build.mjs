@@ -7,7 +7,7 @@ const root = process.cwd();
 const output = path.join(root, 'dist');
 const comicsSource = path.join(root, 'tiras');
 const comicsOutput = path.join(output, 'assets', 'strips');
-const filesToPublish = ['index.html', 'styles.css', 'app.js', 'favicon.png', 'favicon.ico', 'robots.txt'];
+const filesToPublish = ['index.html', 'styles.css', 'app.js', 'favicon.png', 'favicon.ico', 'robots.txt', 'sitemap.xml'];
 const allowedExtensions = new Set(['.jpg', '.jpeg', '.png', '.webp', '.avif']);
 
 // Titles live in a simple text file, easy to edit from the GitHub website.
@@ -37,6 +37,14 @@ await rm(output, { recursive: true, force: true });
 await mkdir(comicsOutput, { recursive: true });
 for (const file of filesToPublish) {
   await copyFile(path.join(root, file), path.join(output, file));
+}
+// When Google Search Console provides an HTML verification file, uploading it
+// at repository root is enough. The build publishes it at the same URL.
+const rootEntries = await readdir(root, { withFileTypes: true });
+for (const entry of rootEntries) {
+  if (entry.isFile() && /^google[a-zA-Z0-9_-]+\.html$/.test(entry.name)) {
+    await copyFile(path.join(root, entry.name), path.join(output, entry.name));
+  }
 }
 
 const uploaded = (await readdir(comicsSource, { withFileTypes: true }))

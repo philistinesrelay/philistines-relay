@@ -1,0 +1,27 @@
+PHILISTINES RELAY — ACTUALIZACION PARA GOOGLE
+
+Este ZIP contiene SOLO 5 archivos para subir en la raiz de GitHub:
+  index.html
+  styles.css
+  build.mjs
+  robots.txt
+  sitemap.xml
+
+IMPORTANTE: no reemplazar la carpeta tiras ni el archivo titulos.txt.
+Entrar a https://github.com/philistinesrelay/philistines-relay
+En la pagina principal (NO en la carpeta tiras): Add file > Upload files.
+Subir los cinco archivos, reemplazar los existentes y Commit changes.
+Cloudflare actualiza automaticamente la web.
+
+Luego entrar a https://search.google.com/search-console/
+Elegir 'Prefijo de URL' (NO 'Dominio') y escribir:
+   https://philistines-relay.pages.dev/
+Para verificar, elegir el metodo 'Archivo HTML', descargar el archivo
+googlexxxxxxxx.html SIN CAMBIARLE EL NOMBRE, y subirlo a la raiz de
+GitHub tal como se subieron los 5 anteriores. Hacer Commit changes.
+Esperar que Cloudflare indique Success; volver a Search Console, Verificar.
+
+En Search Console: Sitemaps > agregar sitemap.xml > Enviar.
+Inspeccion de URL > https://philistines-relay.pages.dev/ > Solicitar indexacion.
+
+La indexacion depende de Google, no es inmediata ni garantizada.

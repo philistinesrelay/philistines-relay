@@ -47,3 +47,7 @@ section+section{margin-top:93px}
 .reader-navigation span{color:var(--gray);font-size:15px}
 @media(max-width:520px){.site-header{padding:45px 0 40px}.site-header h1{font-size:clamp(27px,7.7vw,43px)}.site-header nav{margin-top:22px;flex-wrap:wrap;column-gap:10px;row-gap:10px}.page{padding-bottom:70px}section+section{margin-top:67px}.archive-grid{gap:28px 14px}.archive-meta{flex-direction:column;gap:0}.reader{padding:12px}.reader-navigation button{font-size:15px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* Unobtrusive text for readers and search engines; no cards or decoration. */
+.site-description{max-width:570px;margin:26px auto 0;font-size:18px;line-height:1.4;color:#555;text-align:center}
+@media(max-width:520px){.site-description{max-width:380px;margin-top:22px;font-size:16px;line-height:1.4}}

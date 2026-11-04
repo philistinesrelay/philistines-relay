@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://philistines-relay.pages.dev/sitemap.xml
