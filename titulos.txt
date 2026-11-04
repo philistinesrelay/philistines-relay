@@ -4,10 +4,10 @@
 # Por ejemplo, al escribir 007 = A Reality Show, aparecera: Comic #7 : A Reality Show
 # Si dejas un titulo vacio, la web muestra solamente Comic #N.
 
-001 =
-002 =
-003 =
-004 =
-005 =
-006 =
-007 =
+001 = Action movies everyday
+002 = Detective Bin
+003 = Feel touch
+004 = The music of the city
+005 = Trust pepperoni
+006 = Reality gov
+007 = All the ingredients
