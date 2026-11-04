@@ -1,0 +1,13 @@
+# PHILISTINES RELAY — TITULOS DE LAS TIRAS
+# Escribi el titulo en ingles despues del signo =
+# No escribas "Comic #1"; eso se agrega automaticamente en la web.
+# Por ejemplo, al escribir 007 = A Reality Show, aparecera: Comic #7 : A Reality Show
+# Si dejas un titulo vacio, la web muestra solamente Comic #N.
+
+001 =
+002 =
+003 =
+004 =
+005 =
+006 =
+007 =
